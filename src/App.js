@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import Navbar from './components/Navbar';
+import Intro from './components/Intro';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
 import './App.css';
+import { revealOnScroll } from './utils/scrollEffect';
 
 function App() {
+  useEffect(() => {
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+    return () => window.removeEventListener('scroll', revealOnScroll);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <Intro />
+      <Skills />
+      <Projects />
+      <Footer />
     </div>
   );
 }

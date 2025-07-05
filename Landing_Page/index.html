@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DCE Darbhanga - Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1 id="DCE">DCE Darbhanga</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#departments">Departments</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2 id="Welcome">Welcome to Darbhanga College of Engineering</h2>
+      <p>A Government Engineering College under BCECE Board</p>
+      <a href="#contact" class="btn">Get in Touch</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>DCE Darbhanga is one of the prestigious government engineering colleges in Bihar, offering quality education and technical skills to students in the heart of Mithilanchal.</p>
+  </section>
+
+  <section id="departments">
+    <h2>Departments</h2>
+    <ul class="dept-list">
+      <li>Computer Science and Engineering</li>
+      <li>Cyber Security</li>
+      <li>Electrical Engineering</li>
+      <li>Mechanical Engineering</li>
+      <li>Civil Engineering</li>
+    </ul>
+  </section>
+
+  <section id="events">
+    <h2>Events & Announcements</h2>
+    <ul class="events-list">
+      <li>🚀 TechFest 2025 Coming Soon!</li>
+      <li>📝 Semester Exams from July 15</li>
+      <li>📢 Internship Fair in August</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong> Darbhanga College of Engineering, Mabbi, Darbhanga - 846005</p>
+    <p><strong>Email:</strong> info@dcedarbhanga.ac.in</p>
+    <p><strong>Phone:</strong> +91-9876543210</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Darbhanga College of Engineering. All rights reserved.</p>
+  </footer>
+
+  <script>
+    
+  const heroSection = document.querySelector('.hero');
+  const images = [ 'college10.jpg', 'college9.jpg']; 
+  let index = 0;
+
+  function changeHeroBackground() {
+    heroSection.style.backgroundImage = `url('${images[index]}')`;
+    index = (index + 1) % images.length;
+  }
+
+  changeHeroBackground(); 
+  setInterval(changeHeroBackground, 3000); 
+
+
+  </script>
+</body>
+</html>
